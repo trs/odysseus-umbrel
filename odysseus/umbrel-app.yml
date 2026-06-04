@@ -1,0 +1,28 @@
+manifestVersion: 1
+id: odysseus
+category: ai
+name: Odysseus
+version: "0.1.0"
+tagline: Privacy-focused, self-hosted AI workspace
+description: >-
+  Odysseus is a local-first AI workspace — a self-hosted alternative to
+  ChatGPT and Claude. Your data never leaves your device.
+
+  Supports local models via Ollama, llama.cpp, and vLLM, plus optional
+  remote APIs (OpenAI, OpenRouter, etc.). Built-in SearXNG for private
+  web search, ChromaDB for vector memory, and ntfy for notifications.
+
+  Connect your own LLM API keys, point it at a local Ollama instance,
+  or let it discover models automatically.
+developer: pewdiepie-archdaemon
+website: https://github.com/pewdiepie-archdaemon/odysseus
+repo: https://github.com/pewdiepie-archdaemon/odysseus
+support: https://github.com/pewdiepie-archdaemon/odysseus/issues
+port: 7000
+dependencies: []
+gallery:
+  - 1.jpg
+path: ""
+defaultUsername: admin
+defaultPassword: $APP_PASSWORD
+deterministicPassword: false
