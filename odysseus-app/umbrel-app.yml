@@ -1,10 +1,10 @@
 manifestVersion: 1
-id: odysseus
+id: odysseus-app
 category: Productivity
 name: Odysseus
 version: "0.1.0"
 tagline: Privacy-focused, self-hosted AI workspace
-icon: https://raw.githubusercontent.com/trs/odysseus-umbrel/main/odysseus/icon.svg
+icon: https://raw.githubusercontent.com/trs/odysseus-umbrel/main/odysseus-app/icon.svg
 description: >-
   Odysseus is a local-first AI workspace — a self-hosted alternative to
   ChatGPT and Claude. Your data never leaves your device.
@@ -22,7 +22,7 @@ support: https://github.com/pewdiepie-archdaemon/odysseus/issues
 port: 7000
 dependencies: []
 gallery:
-  - https://raw.githubusercontent.com/trs/odysseus-umbrel/main/odysseus/metadata/1.jpg
+  - https://raw.githubusercontent.com/trs/odysseus-umbrel/main/odysseus-app/metadata/1.jpg
 path: ""
 defaultUsername: admin
 defaultPassword: $APP_PASSWORD
