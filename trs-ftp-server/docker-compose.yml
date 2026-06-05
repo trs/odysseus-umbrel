@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: trs-ftp-server_ftp_1
+      APP_PORT: 21
+
+  ftp:
+    image: docker.io/garethflowers/ftp-server
+    container_name: trs-ftp-server_ftp_1
+    restart: on-failure
+    ports:
+      - "20-21:20-21"
+      - "40000-40009:40000-40009"
+    volumes:
+      - ${APP_DATA_DIR}/data:/home/admin
+    environment:
+      FTP_USER: admin
+      FTP_PASS: ${APP_PASSWORD}
+      PUBLIC_IP: ${DEVICE_HOSTNAME}
+      UID: "1000"
+      GID: "1000"
