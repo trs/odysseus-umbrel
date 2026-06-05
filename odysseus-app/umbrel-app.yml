@@ -25,5 +25,5 @@ gallery:
   - https://raw.githubusercontent.com/trs/odysseus-umbrel/main/odysseus-app/metadata/1.jpg
 path: ""
 defaultUsername: admin
-defaultPassword: $APP_PASSWORD
-deterministicPassword: false
+defaultPassword: ""
+deterministicPassword: true

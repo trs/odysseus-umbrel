@@ -30,7 +30,7 @@ services:
       AUTH_ENABLED: "true"
       LOCALHOST_BYPASS: "false"
       ODYSSEUS_ADMIN_USER: admin
-      ODYSSEUS_ADMIN_PASSWORD: $APP_PASSWORD
+      ODYSSEUS_ADMIN_PASSWORD: ${APP_PASSWORD}
       ALLOWED_ORIGINS: "*"
       SECURE_COOKIES: "false"
       FASTEMBED_MODEL: sentence-transformers/all-MiniLM-L6-v2
