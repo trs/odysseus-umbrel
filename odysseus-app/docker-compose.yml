@@ -3,7 +3,7 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: odysseus_web_1
+      APP_HOST: odysseus-app_web_1
       APP_PORT: 7000
 
   web:
@@ -23,8 +23,8 @@ services:
       LLM_HOSTS: ""
       OPENAI_API_KEY: ""
       OLLAMA_BASE_URL: ""
-      SEARXNG_INSTANCE: http://odysseus_searxng_1:8080
-      CHROMADB_HOST: odysseus_chromadb_1
+      SEARXNG_INSTANCE: http://searxng:8080
+      CHROMADB_HOST: chromadb
       CHROMADB_PORT: "8000"
       DATABASE_URL: sqlite:////app/data/app.db
       AUTH_ENABLED: "true"
