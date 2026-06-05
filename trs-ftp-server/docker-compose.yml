@@ -7,14 +7,16 @@ services:
       APP_PORT: 80
 
   filebrowser:
-    image: docker.io/filebrowser/filebrowser
+    image: docker.io/filebrowser/filebrowser:s6
     container_name: trs-ftp-server_filebrowser_1
     restart: on-failure
-    command: --database /srv/.filebrowser.db --noauth
     volumes:
       - ${APP_DATA_DIR}/data/srv:/srv
-    tmpfs:
-      - /config
+      - ${APP_DATA_DIR}/data/database:/database
+      - ${APP_DATA_DIR}/data/config:/config
+    environment:
+      PUID: "1000"
+      PGID: "1000"
 
   ftp:
     image: docker.io/garethflowers/ftp-server
