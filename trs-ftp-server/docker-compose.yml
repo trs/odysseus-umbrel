@@ -23,6 +23,4 @@ services:
     environment:
       FTP_USER: admin
       FTP_PASS: ${APP_PASSWORD}
-      PUBLIC_IP: ${DEVICE_HOSTNAME}
-      UID: "1000"
-      GID: "1000"
+      PUBLIC_IP: 0.0.0.0
