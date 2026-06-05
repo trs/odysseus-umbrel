@@ -10,10 +10,9 @@ services:
     image: docker.io/filebrowser/filebrowser
     container_name: trs-ftp-server_filebrowser_1
     restart: on-failure
-    command: --database /config/filebrowser.db --noauth
+    command: --database /srv/.filebrowser.db --noauth
     volumes:
       - ${APP_DATA_DIR}/data/srv:/srv
-      - ${APP_DATA_DIR}/data/config:/config
 
   ftp:
     image: docker.io/garethflowers/ftp-server
