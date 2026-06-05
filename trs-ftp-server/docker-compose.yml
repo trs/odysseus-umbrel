@@ -13,6 +13,8 @@ services:
     command: --database /srv/.filebrowser.db --noauth
     volumes:
       - ${APP_DATA_DIR}/data/srv:/srv
+    tmpfs:
+      - /config
 
   ftp:
     image: docker.io/garethflowers/ftp-server
