@@ -1,6 +1,21 @@
 version: "3.7"
 
 services:
+  app_proxy:
+    environment:
+      APP_HOST: trs-ftp-server_filebrowser_1
+      APP_PORT: 80
+
+  filebrowser:
+    image: docker.io/filebrowser/filebrowser
+    container_name: trs-ftp-server_filebrowser_1
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data:/srv
+      - ${APP_DATA_DIR}/filebrowser.db:/database.db
+    environment:
+      FB_NOAUTH: "true"
+
   ftp:
     image: docker.io/garethflowers/ftp-server
     container_name: trs-ftp-server_ftp_1
